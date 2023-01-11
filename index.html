@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homework Help Service</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to My Homework Help Service</h1>
+        <form onsubmit="getAnswer(event)">
+            <label for="question">Ask a question:</label>
+            <input type="text" id="question" name="question">
+            <input type="submit" value="Submit">
+        </form>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="answer"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright ©2022 My Homework Help Service</p>
+    </footer>
+    <script>
+        function getAnswer(event) {
+            event.preventDefault();
+            var question = document.getElementById("question").value;
+            // Display the question text
+            document.getElementById("question-text").innerHTML = question;
+
+            // Use an HTTP request library to send a request to your server with the question
+            // Your server can then use the OpenAI API to generate an answer for the question
+            // and return it to the browser
+            // In this example, we'll use the Fetch API to send a request to the server
+            fetch("/answer", {
+                method: "POST",
+                body: JSON.stringify({ question: question }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // Display the answer in the "answer" div
+                document.getElementById("answer").innerHTML = data.answer;
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        }
+    </script>
+</body>
+</html>

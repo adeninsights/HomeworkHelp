@@ -1,0 +1,73 @@
+body {
+    background-color: #F9D76E; /* a light yellow color for the background */
+    font-family: 'Comic Sans MS', cursive; /* a fun font for the text */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header, main, footer {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    color: #8B5E3C; /* a brown color for the heading */
+    font-size: 3em; /* a larger font size for the heading */
+    margin-bottom: 2em; /* some space between the heading and the form */
+form {
+    background-color: #E8D0A9; /* a light beige color for the form background */
+    padding: 1em; /* some padding for the form */
+    border-radius: 1em; /* rounded corners for the form */
+    box-shadow: 2px 2px 5px #8B5E3C; /* a drop shadow for the form */
+}
+
+label {
+    font-size: 1.5em; /* a larger font size for the label */
+    color: #8B5E3C; /* a brown color for the label */
+    margin-right: 0.5em; /* some space between the label and the input field */
+}
+
+input[type="text"] {
+    padding: 0.5em; /* some padding for the input field */
+    font-size: 1.5em; /* a larger font size for the input field */
+    border-radius: 0.5em; /* rounded corners for the input field */
+    box-shadow: 2px 2px 5px #8B5E3C; /* a drop shadow for the input field */
+}
+
+input[type="submit"] {
+    background-color: #8B5E3C; /* a brown color for the submit button */
+    color: white; /* white text color for the submit button */
+    padding: 0.5em 1em; /* some padding for the submit button */
+    border-radius: 0.5em; /* rounded corners for the submit button */
+    font-size: 1.5em; /* a larger font size for the submit button */
+    margin-left: 0.5em; /* some space between the input field and the submit button */
+    box-shadow: 2px 2px 5px #8B5E3C; /* a drop shadow for the submit button */
+}
+
+#question-container {
+    background-color: #E8D0A9; /* a light beige color for the question container background */
+    padding: 1em; /* some padding for the question container */
+    border-radius: 1em; /* rounded corners for the question container */
+    box-shadow: 2px 2px 5px #8B5E3C; /* a drop shadow for the question container */
+    margin-top: 2em; /* some space between the form and the question container */
+}
+
+#question-text {
+    font-size: 2em; /* a larger font size for the question text */
+    margin-bottom: 1em; /* some space between the question text and the answer */
+}
+
+#answer {
+    font-size: 1.5em; /* a larger font size for the answer */
+}
+
+footer {
+footer {
+    background-color: #8B5E3C; /* a brown color for the footer background */
+    color: white; /* white text color for the footer */
+    padding: 1em; /* some padding for the footer */
+    text-align: center; /* center the text in the footer */
+}
